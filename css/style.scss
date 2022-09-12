@@ -28,24 +28,39 @@ body {
     color: $darkest-gray;
 }
 
-ul,
-p {
+ul {
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    font-size: 14px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+}
+
 .container {
     width: 1200px;
-
-    &:not(.container_order) {
-        margin: 0 auto;
-    }
+    margin: 0 auto;
+    padding: 0 15px;
 
     &_header {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        padding: 32px 0;
+        padding: 24px 0 25px 0;
     }
 
     &_order {
@@ -92,7 +107,6 @@ p {
     display: flex;
 
     &__list {
-        list-style: none;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -101,7 +115,9 @@ p {
     }
 
     &__item {
-        padding: 0 25px;
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
 
         &:hover {
             .navbar__link {
@@ -133,13 +149,13 @@ p {
 }
 
 .contacts {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+    margin-left: auto;
     display: flex;
 
     &__item {
-        padding: 0 25px;
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
 
         &:hover {
             .contacts__link {
@@ -199,7 +215,6 @@ p {
 }
 
 .priorities-articles {
-    list-style: none;
     display: flex;
     justify-content: space-between;
     margin: 0;
@@ -237,9 +252,7 @@ p {
 }
 
 .images-list {
-    list-style: none;
     display: flex;
-    justify-content: space-between;
 
     &__item {
         margin-left: 30px;
@@ -255,7 +268,6 @@ p {
 }
 
 .team {
-    list-style: none;
     display: flex;
     justify-content: space-between;
 
@@ -273,7 +285,7 @@ p {
         }
 
         &__text {
-            margin: 30px 0;
+            padding: 30px 0;
         }
 
         &__name {
@@ -297,7 +309,6 @@ p {
     text-align: left;
 
     &__contacts {
-        list-style: none;
         margin: 0;
         padding: 0;
 
@@ -312,13 +323,17 @@ p {
             font-style: normal;
         }
     }
+
+    .logo {
+        margin-bottom: 20px;
+    }
 }
 
 .location {
     line-height: 1.7;
     color: $white;
     font-style: normal;
-    padding: 20px 0 9px 0;
+    margin-bottom: 9px;
 }
 
 .portfolio {
@@ -327,34 +342,25 @@ p {
     align-items: center;
 
     &__section-header {
-        font-weight: 900;
-        font-size: 44px;
-        line-height: 1.36;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        text-align: center;
-        margin-bottom: 30px;
+        visibility: hidden;
+        font-size: 0;
     }
 
     &__list {
-        list-style: none;
         display: flex;
         flex-wrap: wrap;
-        padding: 0 15px;
         margin: 0;
-        justify-content: space-between;
+        column-gap: 30px;
+        row-gap: 30px;
     }
 
     &__item {
         width: 370px;
-        margin-bottom: 30px;
-
 
         &-info {
             padding: 20px 24px;
             border: 1px solid $border-color;
             border-top: 0;
-            margin-top: -4px;
         }
 
         &-header {
@@ -364,6 +370,7 @@ p {
             line-height: 2;
             letter-spacing: .06em;
             color: $darkest-gray;
+            white-space: nowrap;
         }
 
         &-text {
@@ -380,9 +387,9 @@ p {
 }
 
 .filters {
-    list-style: none;
     display: flex;
     margin-bottom: 50px;
+    justify-content: center;
 
     &__item {
         margin-left: 8px;
