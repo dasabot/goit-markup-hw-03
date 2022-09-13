@@ -24,10 +24,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: --white;
+    background-color: var(--white);
     font-size: 14px;
     letter-spacing: .03em;
-    color: --darkest-gray;
+    color: var(--darkest-gray);
 }
 
 ul {
@@ -91,18 +91,22 @@ img {
         color: black;
 
         &_blue {
-            color: --blue;
+            color: var(--blue);
         }
 
         &_white {
-            color: --white;
+            color: var(--white);
         }
     }
 }
 
 .header {
     width: 100%;
-    border-bottom: 1px solid --lighest-gray;
+    border-bottom: 1px solid var(--lighest-gray);
+
+    .logo {
+        margin-right: 93px;
+    }
 }
 
 .navbar {
@@ -112,7 +116,6 @@ img {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-right: 93px;
         padding: 0;
     }
 
@@ -123,19 +126,19 @@ img {
 
         &:hover {
             .navbar__link {
-                color: --blue;
+                color: var(--blue);
             }
         }
 
         &:focus {
             .navbar__link {
-                color: --blue;
+                color: var(--blue);
             }
         }
 
         &_active {
             .navbar__link {
-                color: --blue;
+                color: var(--blue);
             }
         }
     }
@@ -156,18 +159,18 @@ img {
 
     &__item {
         &:not(:last-child) {
-            margin-right: 25px;
+            margin-right: 50px;
         }
 
         &:hover {
             .contacts__link {
-                color: --blue;
+                color: var(--blue);
             }
         }
 
         &:focus {
             .contacts__link {
-                color: --blue;
+                color: var(--blue);
             }
         }
     }
@@ -177,19 +180,19 @@ img {
         font-weight: 500;
         line-height: 1.14;
         letter-spacing: .02em;
-        color: --gray;
+        color: var(--gray);
     }
 }
 
 .order {
-    background-color: --dark-gray;
+    background-color: var(--dark-gray);
     padding: 200px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     &__header {
-        color: --white;
+        color: var(--white);
         font-weight: 900;
         font-size: 44px;
         line-height: 1.36;
@@ -203,7 +206,7 @@ img {
         font-family: 'Roboto', sans-serif;
         cursor: pointer;
         padding: 10px 32px;
-        background-color: --blue;
+        background-color: var(--blue);
         border-radius: 4px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border: 0;
@@ -212,7 +215,7 @@ img {
         line-height: 1.9;
         text-align: center;
         letter-spacing: 0.06em;
-        color: --white;
+        color: var(--white);
     }
 }
 
@@ -239,7 +242,7 @@ img {
         &-text {
             line-height: 1.7;
             letter-spacing: 0.03em;
-            color: --gray;
+            color: var(--gray);
         }
     }
 }
@@ -265,7 +268,7 @@ img {
 }
 
 .team-section {
-    background-color: --light-gray;
+    background-color: var(--light-gray);
 }
 
 .team {
@@ -274,7 +277,7 @@ img {
 
     &-card {
         margin-left: 30px;
-        background-color: --white;
+        background-color: var(--white);
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 0px 0px 4px 4px;
         text-align: center;
@@ -297,7 +300,7 @@ img {
         }
 
         &__profession {
-            color: --gray;
+            color: var(--gray);
             font-size: 16px;
             line-height: 1.18;
         }
@@ -305,7 +308,7 @@ img {
 }
 
 .footer {
-    background-color: --dark-gray;
+    background-color: var(--dark-gray);
     padding: 60px 0;
     text-align: left;
 
@@ -319,7 +322,7 @@ img {
 
         &-link {
             line-height: 1.7;
-            color: --gray;
+            color: var(--gray);
             text-decoration: none;
             font-style: normal;
         }
@@ -332,7 +335,7 @@ img {
 
 .location {
     line-height: 1.7;
-    color: --white;
+    color: var(--white);
     font-style: normal;
     margin-bottom: 9px;
 }
@@ -360,7 +363,7 @@ img {
 
         &-info {
             padding: 20px 24px;
-            border: 1px solid --border-color;
+            border: 1px solid var(--border-color);
             border-top: 0;
         }
 
@@ -370,14 +373,14 @@ img {
             font-size: 18px;
             line-height: 2;
             letter-spacing: .06em;
-            color: --darkest-gray;
+            color: var(--darkest-gray);
             white-space: nowrap;
         }
 
         &-text {
             font-size: 16px;
             line-height: 1.8;
-            color: --gray;
+            color: var(--gray);
             margin: 0;
         }
     }
@@ -403,7 +406,7 @@ img {
     &__button {
         font-family: 'Roboto', sans-serif;
         border-radius: 4px;
-        background-color: --lighest-gray;
+        background-color: var(--lighest-gray);
         padding: 6px 22px;
         font-weight: 500;
         font-size: 16px;
@@ -413,21 +416,21 @@ img {
         cursor: pointer;
 
         &:hover {
-            background-color: --blue;
+            background-color: var(--blue);
             box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-            color: --white;
+            color: var(--white);
         }
 
         &:focus {
-            background-color: --blue;
+            background-color: var(--blue);
             box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-            color: --white;
+            color: var(--white);
         }
 
         &_active {
-            background-color: --blue;
+            background-color: var(--blue);
             box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-            color: --white;
+            color: var(--white);
         }
     }
 }

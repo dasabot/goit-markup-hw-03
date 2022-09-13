@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
-
 :root {
   --blue: #2196F3;
   --border-color: #EEEEEE;
@@ -97,6 +96,9 @@ img {
   width: 100%;
   border-bottom: 1px solid var(--lighest-gray);
 }
+.header .logo {
+  margin-right: 93px;
+}
 
 .navbar {
   display: flex;
@@ -105,7 +107,6 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 93px;
   padding: 0;
 }
 .navbar__item:not(:last-child) {
@@ -134,7 +135,7 @@ img {
   display: flex;
 }
 .contacts__item:not(:last-child) {
-  margin-right: 25px;
+  margin-right: 50px;
 }
 .contacts__item:hover .contacts__link {
   color: var(--blue);
