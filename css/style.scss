@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
-$blue: #2196F3;
-$border-color: #EEEEEE;
-$lighest-gray: #ECECEC;
-$light-gray: #F5F5F5;
-$gray: #757575;
-$dark-gray: #2F303A;
-$darkest-gray: #212121;
-$white: white;
+:root {
+    --blue: #2196F3;
+    --border-color: #EEEEEE;
+    --lighest-gray: #ECECEC;
+    --light-gray: #F5F5F5;
+    --gray: #757575;
+    --dark-gray: #2F303A;
+    --darkest-gray: #212121;
+    --white: white;
+  }
 
 
 html,
@@ -22,10 +24,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: $white;
+    background-color: --white;
     font-size: 14px;
     letter-spacing: .03em;
-    color: $darkest-gray;
+    color: --darkest-gray;
 }
 
 ul {
@@ -89,18 +91,18 @@ img {
         color: black;
 
         &_blue {
-            color: $blue;
+            color: --blue;
         }
 
         &_white {
-            color: $white;
+            color: --white;
         }
     }
 }
 
 .header {
     width: 100%;
-    border-bottom: 1px solid $lighest-gray;
+    border-bottom: 1px solid --lighest-gray;
 }
 
 .navbar {
@@ -110,30 +112,30 @@ img {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 0 0 60px;
+        margin-right: 93px;
         padding: 0;
     }
 
     &__item {
         &:not(:last-child) {
-            margin-right: 25px;
+            margin-right: 50px;
         }
 
         &:hover {
             .navbar__link {
-                color: $blue;
+                color: --blue;
             }
         }
 
         &:focus {
             .navbar__link {
-                color: $blue;
+                color: --blue;
             }
         }
 
         &_active {
             .navbar__link {
-                color: $blue;
+                color: --blue;
             }
         }
     }
@@ -159,13 +161,13 @@ img {
 
         &:hover {
             .contacts__link {
-                color: $blue;
+                color: --blue;
             }
         }
 
         &:focus {
             .contacts__link {
-                color: $blue;
+                color: --blue;
             }
         }
     }
@@ -175,19 +177,19 @@ img {
         font-weight: 500;
         line-height: 1.14;
         letter-spacing: .02em;
-        color: $gray;
+        color: --gray;
     }
 }
 
 .order {
-    background-color: $dark-gray;
+    background-color: --dark-gray;
     padding: 200px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     &__header {
-        color: $white;
+        color: --white;
         font-weight: 900;
         font-size: 44px;
         line-height: 1.36;
@@ -201,7 +203,7 @@ img {
         font-family: 'Roboto', sans-serif;
         cursor: pointer;
         padding: 10px 32px;
-        background-color: $blue;
+        background-color: --blue;
         border-radius: 4px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border: 0;
@@ -210,7 +212,7 @@ img {
         line-height: 1.9;
         text-align: center;
         letter-spacing: 0.06em;
-        color: $white;
+        color: --white;
     }
 }
 
@@ -235,10 +237,9 @@ img {
         }
 
         &-text {
-            font-weight: 400;
             line-height: 1.7;
             letter-spacing: 0.03em;
-            color: $gray;
+            color: --gray;
         }
     }
 }
@@ -264,7 +265,7 @@ img {
 }
 
 .team-section {
-    background-color: $light-gray;
+    background-color: --light-gray;
 }
 
 .team {
@@ -273,7 +274,7 @@ img {
 
     &-card {
         margin-left: 30px;
-        background-color: $white;
+        background-color: --white;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 0px 0px 4px 4px;
         text-align: center;
@@ -296,7 +297,7 @@ img {
         }
 
         &__profession {
-            color: $gray;
+            color: --gray;
             font-size: 16px;
             line-height: 1.18;
         }
@@ -304,7 +305,7 @@ img {
 }
 
 .footer {
-    background-color: $dark-gray;
+    background-color: --dark-gray;
     padding: 60px 0;
     text-align: left;
 
@@ -318,7 +319,7 @@ img {
 
         &-link {
             line-height: 1.7;
-            color: $gray;
+            color: --gray;
             text-decoration: none;
             font-style: normal;
         }
@@ -331,7 +332,7 @@ img {
 
 .location {
     line-height: 1.7;
-    color: $white;
+    color: --white;
     font-style: normal;
     margin-bottom: 9px;
 }
@@ -359,7 +360,7 @@ img {
 
         &-info {
             padding: 20px 24px;
-            border: 1px solid $border-color;
+            border: 1px solid --border-color;
             border-top: 0;
         }
 
@@ -369,14 +370,14 @@ img {
             font-size: 18px;
             line-height: 2;
             letter-spacing: .06em;
-            color: $darkest-gray;
+            color: --darkest-gray;
             white-space: nowrap;
         }
 
         &-text {
             font-size: 16px;
             line-height: 1.8;
-            color: $gray;
+            color: --gray;
             margin: 0;
         }
     }
@@ -402,7 +403,7 @@ img {
     &__button {
         font-family: 'Roboto', sans-serif;
         border-radius: 4px;
-        background-color: $lighest-gray;
+        background-color: --lighest-gray;
         padding: 6px 22px;
         font-weight: 500;
         font-size: 16px;
@@ -412,21 +413,21 @@ img {
         cursor: pointer;
 
         &:hover {
-            background-color: $blue;
+            background-color: --blue;
             box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-            color: $white;
+            color: --white;
         }
 
         &:focus {
-            background-color: $blue;
+            background-color: --blue;
             box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-            color: $white;
+            color: --white;
         }
 
         &_active {
-            background-color: $blue;
+            background-color: --blue;
             box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-            color: $white;
+            color: --white;
         }
     }
 }
